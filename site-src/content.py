@@ -23,6 +23,7 @@ SOCIALS = [
     ("YouTube", "https://www.youtube.com/@get-found6025", "youtube"),
     ("TikTok", "https://www.tiktok.com/@getfound2?lang=en", "tiktok"),
     ("X", "https://x.com/RianSlabbe19436", "x"),
+    ("Google Business Profile", MAPS, "google"),
 ]
 CTA = "Get Your Free Visibility Audit"
 
@@ -58,8 +59,8 @@ AI_SEO_FEATURES = [
 
 PRICING = {
     "za": {"name": "South Africa", "cur": "R", "local": "6,000", "ai": "12,000", "setup_local": "R3,000", "setup_ai": "R5,000"},
-    "uk": {"name": "United Kingdom", "cur": "£", "local": "350", "ai": "650"},
-    "us": {"name": "United States", "cur": "$", "local": "450", "ai": "750"},
+    "uk": {"name": "United Kingdom", "cur": "£", "local": "350", "ai": "650", "setup_local": "£200", "setup_ai": "£300"},
+    "us": {"name": "United States", "cur": "$", "local": "450", "ai": "750", "setup_local": "$300", "setup_ai": "$400"},
 }
 
 REVIEWS = [
@@ -114,9 +115,9 @@ FAQS = [
     ("Services", "How many keywords do you track?",
      "Our SEO + AI SEO package tracks up to 300 keywords. Our Local SEO package focuses on local keywords, with geo-grid rank tracking and website rank tracking."),
     ("Pricing", "How much does Local SEO cost in South Africa?",
-     "Local SEO is R6,000 per month, with a once-off setup fee of R3,000."),
+     "In South Africa, Local SEO is R6,000 per month with a once-off setup fee of R3,000. In the UK it’s £350 per month with a once-off £200 setup fee, and in the USA it’s $450 per month with a once-off $300 setup fee."),
     ("Pricing", "How much does SEO + AI SEO cost?",
-     "In South Africa, SEO + AI SEO is R12,000 per month with a once-off setup fee of R5,000. In the UK it’s £650 per month and in the USA $750 per month."),
+     "In South Africa, SEO + AI SEO is R12,000 per month with a once-off setup fee of R5,000. In the UK it’s £650 per month with a once-off £300 setup fee, and in the USA it’s $750 per month with a once-off $400 setup fee."),
     ("Pricing", "Why are your UK and US prices different from your South African prices?",
      "We use regional pricing rather than a straight currency conversion. South African pricing is structured around the local SME market, while UK and US pricing is structured for those markets and stays very competitive. UK and US clients get exactly the same product at a cost-effective price because the work is done from South Africa."),
     ("Working with us", "Do I have to learn any SEO software?",

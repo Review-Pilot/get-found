@@ -60,6 +60,23 @@
     });
   }
 
+  // ---- Services page: switch prices between South Africa / UK / USA
+  var mchips = document.querySelectorAll("[data-market]");
+  if (mchips.length) {
+    var setMarket = function (m, push) {
+      document.querySelectorAll("[data-za]").forEach(function (el) { if (el.dataset[m]) el.textContent = el.dataset[m]; });
+      mchips.forEach(function (c) { c.setAttribute("aria-pressed", c.dataset.market === m ? "true" : "false"); });
+      if (push && window.history && history.replaceState) {
+        try { history.replaceState(null, "", "?market=" + m + location.hash); } catch (e) {}
+      }
+    };
+    mchips.forEach(function (c) { c.addEventListener("click", function () { setMarket(c.dataset.market, true); }); });
+    var start = "za";
+    try { start = new URLSearchParams(location.search).get("market") || "za"; } catch (e) {}
+    if (["za", "uk", "us"].indexOf(start) === -1) start = "za";
+    if (start !== "za") setMarket(start, false);
+  }
+
   // ---- FAQ search
   var fs = document.getElementById("faq-search");
   if (fs) {

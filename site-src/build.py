@@ -148,7 +148,7 @@ def header(path):
 
 def footer():
     soc = "".join(
-        f'<a href="{u}" target="_blank" rel="noopener" aria-label="{n}"><img src="/assets/img/social-{k}.png" width="24" height="24" alt="" loading="lazy"></a>'
+        f'<a href="{u}" target="_blank" rel="noopener" aria-label="{n}"><img src="/assets/img/social-{k}.png" width="32" height="32" alt="" loading="lazy"></a>'
         for n, u, k in SOCIALS
     )
     return f"""<footer class="site-footer">
@@ -269,8 +269,8 @@ def hero(h1, lead, crumbs=None, eyebrow=None, buttons=True, compact=True, extra=
 def cta_band(h2="How Visible Is Your Business Today?", text="Find out where you really show up on Google, Google Maps and AI search. Your free visibility audit is quick, honest and obligation-free."):
     return f"""<section class="section dark glow center" id="cta">
   <div class="container narrow">
-    <h2>{esc(h2)}</h2>
-    <p class="lead">{esc(text)}</p>
+    <h2>{esc(html.unescape(h2))}</h2>
+    <p class="lead">{esc(html.unescape(text))}</p>
     <div class="btn-row center"><a class="btn" href="/contact/#audit">{CTA}</a><a class="btn ghost" href="{WHATSAPP}" target="_blank" rel="noopener">WhatsApp us</a></div>
   </div>
 </section>"""
@@ -319,7 +319,7 @@ def post_card(p):
     img = hero_image(p)
     thumb = (
         f'<div class="thumb"><img src="{img["v"]}" alt="" loading="lazy" width="{img["w"]}" height="{img["h"]}"></div>'
-        if img and img["w"] >= 800
+        if img and img["w"] >= 600
         else f'<div class="thumb art"><span>{esc(p["category"])}</span></div>'
     )
     return f"""<article class="post-card" data-cat="{esc(p['category'])}">
@@ -479,8 +479,8 @@ def services():
 <thead><tr><th>Market</th><th>Local SEO</th><th>SEO + AI SEO</th></tr></thead>
 <tbody>
 <tr><th scope="row">South Africa</th><td>R6,000 / month<br><small>Setup R3,000 once-off</small></td><td>R12,000 / month<br><small>Setup R5,000 once-off</small></td></tr>
-<tr><th scope="row">United Kingdom</th><td>£350 / month</td><td>£650 / month</td></tr>
-<tr><th scope="row">United States</th><td>$450 / month</td><td>$750 / month</td></tr>
+<tr><th scope="row">United Kingdom</th><td>£350 / month<br><small>Setup £200 once-off</small></td><td>£650 / month<br><small>Setup £300 once-off</small></td></tr>
+<tr><th scope="row">United States</th><td>$450 / month<br><small>Setup $300 once-off</small></td><td>$750 / month<br><small>Setup $400 once-off</small></td></tr>
 </tbody></table></div>
 <p style="margin-top:1rem" class="form-note">We use regional pricing rather than direct currency conversion. South African pricing is built around the local SME market; UK and US pricing is built for those markets and stays highly competitive. It&rsquo;s the same product, and the work is done from South Africa, which is what keeps it cost-effective.</p>"""
     faq_items = [f for f in FAQS if f[0] in ("Services", "Pricing")]
@@ -489,12 +489,17 @@ def services():
                 crumbs=[("Services & Pricing", None)], eyebrow="Services & Pricing") + f"""
 <section class="section">
   <div class="container">
+    <div class="chips" role="group" aria-label="Choose your market" style="margin-bottom:2.4rem">
+      <button class="chip" type="button" data-market="za" aria-pressed="true">South Africa (R)</button>
+      <button class="chip" type="button" data-market="uk" aria-pressed="false">United Kingdom (£)</button>
+      <button class="chip" type="button" data-market="us" aria-pressed="false">USA ($)</button>
+    </div>
     <div class="grid two" id="packages">
       <article class="card" id="local-seo">
         <h2 style="font-size:1.7rem">Local SEO</h2>
         <p>Get found on Google Search and Google Maps by customers in your area, and give them reasons to choose you.</p>
-        <div class="price">R6,000<small> / month</small></div>
-        <div class="setup">South Africa · once-off setup R3,000</div>
+        <div class="price"><span class="amt" data-za="R6,000" data-uk="£350" data-us="$450">R6,000</span><small> / month</small></div>
+        <div class="setup" data-za="South Africa · once-off setup R3,000" data-uk="United Kingdom · once-off setup £200" data-us="United States · once-off setup $300">South Africa · once-off setup R3,000</div>
         {ticks(LOCAL_SEO_FEATURES)}
         <a class="btn" href="/contact/#audit">{CTA}</a>
       </article>
@@ -502,8 +507,8 @@ def services():
         <span class="badge">EVERYTHING IN LOCAL SEO, AND MORE</span>
         <h2 style="font-size:1.7rem">SEO + AI SEO</h2>
         <p>Add a full SEO strategy and AI search optimisation, so you&rsquo;re visible in Google results, on the map and in tools like ChatGPT.</p>
-        <div class="price">R12,000<small> / month</small></div>
-        <div class="setup">South Africa · once-off setup R5,000</div>
+        <div class="price"><span class="amt" data-za="R12,000" data-uk="£650" data-us="$750">R12,000</span><small> / month</small></div>
+        <div class="setup" data-za="South Africa · once-off setup R5,000" data-uk="United Kingdom · once-off setup £300" data-us="United States · once-off setup $400">South Africa · once-off setup R5,000</div>
         {ticks(AI_SEO_FEATURES)}
         <a class="btn" href="/contact/#audit">{CTA}</a>
       </article>
@@ -590,7 +595,7 @@ def market_page(key):
     </div>
   </div>
 </section>"""
-        price_note = f"""<p class="form-note center" style="margin-top:1.2rem">Once-off setup: Local SEO R3,000 · SEO + AI SEO R5,000</p>"""
+        price_note = ""
         why = [
             ("Built for South African SMEs", "Pricing and packages designed around the local market, not converted from somewhere else."),
             ("Google Maps first", "For most local businesses, the map is where customers decide. We make it a priority."),
@@ -620,8 +625,8 @@ def market_page(key):
   <div class="container">
     <div class="section-head"><h2>{cfg['name']} pricing</h2><p class="lead">Two clear packages. Pricing set for the {cfg['name']} market.</p></div>
     <div class="grid two">
-      <article class="card"><h3>Local SEO</h3><p>Win on Google Search and Google Maps.</p><div class="price">{cur}{pr['local']}<small> / month</small></div>{'<div class="setup">Once-off setup R3,000</div>' if key=='za' else '<div class="setup">Everything you need to dominate local search</div>'}{ticks(LOCAL_SEO_FEATURES[:6] + ["…and more"])}<a class="btn" href="/services/#local-seo">Everything included</a></article>
-      <article class="card featured"><span class="badge">LOCAL SEO + AI SEARCH</span><h3>SEO + AI SEO</h3><p>Add full SEO and AI search visibility.</p><div class="price">{cur}{pr['ai']}<small> / month</small></div>{'<div class="setup">Once-off setup R5,000</div>' if key=='za' else '<div class="setup">Full SEO strategy plus AI search optimisation</div>'}{ticks(["Everything in Local SEO", "Custom SEO strategy, up to 300 tracked keywords", "Ongoing technical SEO and page improvements", "AI search optimisation and AI traffic reporting", "…and more"])}<a class="btn" href="/services/#seo-ai-seo">Everything included</a></article>
+      <article class="card"><h3>Local SEO</h3><p>Win on Google Search and Google Maps.</p><div class="price">{cur}{pr['local']}<small> / month</small></div><div class="setup">Once-off setup {pr["setup_local"]}</div>{ticks(LOCAL_SEO_FEATURES[:6] + ["…and more"])}<a class="btn" href="/services/?market={key}#local-seo">Everything included</a></article>
+      <article class="card featured"><span class="badge">LOCAL SEO + AI SEARCH</span><h3>SEO + AI SEO</h3><p>Add full SEO and AI search visibility.</p><div class="price">{cur}{pr['ai']}<small> / month</small></div><div class="setup">Once-off setup {pr["setup_ai"]}</div>{ticks(["Everything in Local SEO", "Custom SEO strategy, up to 300 tracked keywords", "Ongoing technical SEO and page improvements", "AI search optimisation and AI traffic reporting", "…and more"])}<a class="btn" href="/services/?market={key}#seo-ai-seo">Everything included</a></article>
     </div>
     {price_note}
   </div>
@@ -652,7 +657,7 @@ def markets_hub():
     for k, slug, flag, tag in (("za", "south-africa", "South Africa", "Based in Cape Town"), ("uk", "uk", "United Kingdom", "Same product, cost-effective"), ("us", "usa", "United States", "Same product, cost-effective")):
         pr = PRICING[k]
         cards += f"""<article class="card"><span class="tag" style="align-self:flex-start">{tag}</span><h2 style="font-size:1.5rem;margin-top:.8rem">{flag}</h2>
-<p>Local SEO from <strong>{pr['cur']}{pr['local']}/month</strong><br>SEO + AI SEO from <strong>{pr['cur']}{pr['ai']}/month</strong></p>
+<p>Local SEO from <strong>{pr['cur']}{pr['local']}/month</strong> <small style="color:var(--muted)">(setup {pr['setup_local']})</small><br>SEO + AI SEO from <strong>{pr['cur']}{pr['ai']}/month</strong> <small style="color:var(--muted)">(setup {pr['setup_ai']})</small></p>
 <a class="btn" href="/markets/{slug}/">{flag} SEO services</a></article>"""
     body = hero("Local SEO &amp; AI SEO Services by Market",
                 "We help businesses in South Africa, the United Kingdom and the USA get found on Google, Google Maps and AI search, with pricing set for each market.",
@@ -821,7 +826,7 @@ def blog_post(p):
     toc = ""
     if len(h2s) >= 4:
         toc = '<nav class="toc" aria-label="In this article"><strong>In this article</strong><ol>' + "".join(f'<li><a href="#{i}">{esc(t)}</a></li>' for i, t in h2s) + "</ol></nav>"
-    hero_img = (f'<img class="article-hero" src="{hero_b["v"]}" width="{hero_b["w"]}" height="{hero_b["h"]}" alt="Illustration for {esc(p["title"])}" fetchpriority="high">' if hero_b and hero_b["w"] >= 800 else "")
+    hero_img = (f'<img class="article-hero" src="{hero_b["v"]}" width="{hero_b["w"]}" height="{hero_b["h"]}" alt="Illustration for {esc(p["title"])}" fetchpriority="high">' if hero_b and hero_b["w"] >= 600 else "")
     related = [q for q in POSTS_SORTED if q["slug"] != p["slug"]]
     related.sort(key=lambda q: (q["category"] != p["category"],))
     rel = "".join(post_card(q) for q in related[:3])
