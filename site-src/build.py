@@ -140,7 +140,7 @@ def header(path):
     <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false">Menu</button>
     <nav class="nav" id="site-nav" aria-label="Main">
       <ul>{''.join(items)}</ul>
-      <div class="header-cta"><a class="btn sm" href="/contact/#audit">{CTA}</a></div>
+      <div class="header-cta"><a class="btn sm" href="/audit/">{CTA}</a></div>
     </nav>
   </div>
 </header>"""
@@ -197,7 +197,7 @@ def footer():
     <div class="legal"><span>© {YEAR} Get Found. All rights reserved.</span><span>Local SEO &amp; AI SEO Specialists · Cape Town, South Africa</span></div>
   </div>
 </footer>
-<div class="mobile-cta"><a class="btn" href="/contact/#audit">Free Visibility Audit</a><a class="btn ghost" style="color:#fff;border-color:rgba(255,255,255,.5)" href="{WHATSAPP}" target="_blank" rel="noopener">WhatsApp</a></div>"""
+<div class="mobile-cta"><a class="btn" href="/audit/">Free Visibility Audit</a><a class="btn ghost" style="color:#fff;border-color:rgba(255,255,255,.5)" href="{WHATSAPP}" target="_blank" rel="noopener">WhatsApp</a></div>"""
 
 
 def page(path, title, desc, body, schema=None, og="/assets/img/og-image.png", og_type="website", noindex=False, extra_head=""):
@@ -255,7 +255,7 @@ def hero(h1, lead, crumbs=None, eyebrow=None, buttons=True, compact=True, extra=
         ]
         cr = f'<nav class="crumbs" aria-label="Breadcrumb">{" <span aria-hidden=\"true\">/</span> ".join(parts)}</nav>'
     btns = (
-        f'<div class="btn-row"><a class="btn" href="/contact/#audit">{CTA}</a><a class="btn ghost" href="/services/">See services &amp; pricing</a></div>'
+        f'<div class="btn-row"><a class="btn" href="/audit/">{CTA}</a><a class="btn ghost" href="/services/">See services &amp; pricing</a></div>'
         if buttons
         else ""
     )
@@ -275,7 +275,7 @@ def cta_band(h2="How Visible Is Your Business Today?", text="Find out where you 
   <div class="container narrow">
     <h2>{esc(html.unescape(h2))}</h2>
     <p class="lead">{esc(html.unescape(text))}</p>
-    <div class="btn-row center"><a class="btn" href="/contact/#audit">{CTA}</a><a class="btn ghost" href="{WHATSAPP}" target="_blank" rel="noopener">WhatsApp us</a></div>
+    <div class="btn-row center"><a class="btn" href="/audit/">{CTA}</a><a class="btn ghost" href="{WHATSAPP}" target="_blank" rel="noopener">WhatsApp us</a></div>
   </div>
 </section>"""
 
@@ -351,7 +351,7 @@ def chatgpt_proof(heading_level="h2"):
       <p class="lead">We asked ChatGPT for the best, most reliable and cost-effective car hire companies in Cape Town. Our client <strong style="color:#fff">Vineyard Car Hire</strong> came up as the <strong style="color:#fff">number one recommendation</strong>.</p>
       <p>AI search is the newest way customers find a business, and the businesses it names are the ones that get the call. Building that visibility is what our AI SEO work is all about.</p>
       <p class="fine">A real example from 23 November 2026. AI answers change, so this is an example, not a guaranteed outcome.</p>
-      <div class="btn-row"><a class="btn" href="/contact/#audit">{CTA}</a><a class="btn ghost" href="/services/#seo-ai-seo">See SEO + AI SEO</a></div>
+      <div class="btn-row"><a class="btn" href="/audit/">{CTA}</a><a class="btn ghost" href="/services/#seo-ai-seo">See SEO + AI SEO</a></div>
       <figure class="qcard"><img src="/assets/img/local-falcon-quote.webp" width="800" height="407" alt="Quote from Local Falcon: if you want to rank in ChatGPT for local searches, you'll need to focus on how your business appears across a broader digital ecosystem; not just Google." loading="lazy"></figure>
     </div>
   </div>
@@ -410,7 +410,7 @@ def home():
     <span class="eyebrow">Local SEO &amp; AI SEO Specialists</span>
     <h1>Get Found on Google. Google Maps. And AI&nbsp;Search.</h1>
     <p class="lead">Your customers are searching right now, on Google, on the map and in tools like ChatGPT. We make sure it&rsquo;s your business they find, trust and choose.</p>
-    <div class="btn-row center"><a class="btn" href="/contact/#audit">{CTA}</a><a class="btn ghost" href="/services/">See services &amp; pricing</a></div>
+    <div class="btn-row center"><a class="btn" href="/audit/">{CTA}</a><a class="btn ghost" href="/services/">See services &amp; pricing</a></div>
     <p class="tagline">Get Found. Get Chosen. <span>Grow.</span></p>
   </div>
 </section>
@@ -459,7 +459,7 @@ def home():
       <h2>Hands-on, from the first call</h2>
       <p>Get Found was founded by <strong>Rian Slabbert</strong>, a marketer and entrepreneur with over 30 years of business experience, who is passionate about helping business owners grow their sales through digital marketing.</p>
       <p>We treat every client&rsquo;s business as if it were our own. That means finding the 20% of work that unlocks the next 80% of growth, getting our hands dirty on your Google Business Profile and website, and being the kind of provider who actually returns your calls.</p>
-      <div class="btn-row"><a class="btn" href="/contact/#audit">{CTA}</a></div>
+      <div class="btn-row"><a class="btn" href="/audit/">{CTA}</a></div>
     </div>
     <div class="frame right"><img src="/assets/img/rian-slabbert-founder.webp" width="900" height="597" alt="Rian Slabbert, founder of Get Found" loading="lazy"></div>
   </div>
@@ -546,7 +546,7 @@ def services():
         <div class="price"><span class="amt" data-za="R6,000" data-uk="£350" data-us="$450">R6,000</span><small> / month</small></div>
         <div class="setup" data-za="South Africa · once-off setup R3,000" data-uk="United Kingdom · once-off setup £200" data-us="United States · once-off setup $300">South Africa · once-off setup R3,000</div>
         {ticks(LOCAL_SEO_FEATURES)}
-        <a class="btn" href="/contact/#audit">{CTA}</a>
+        <a class="btn" href="/audit/">{CTA}</a>
       </article>
       <article class="card featured" id="seo-ai-seo">
         <span class="badge">EVERYTHING IN LOCAL SEO, AND MORE</span>
@@ -555,7 +555,7 @@ def services():
         <div class="price"><span class="amt" data-za="R12,000" data-uk="£650" data-us="$750">R12,000</span><small> / month</small></div>
         <div class="setup" data-za="South Africa · once-off setup R5,000" data-uk="United Kingdom · once-off setup £300" data-us="United States · once-off setup $400">South Africa · once-off setup R5,000</div>
         {ticks(AI_SEO_FEATURES)}
-        <a class="btn" href="/contact/#audit">{CTA}</a>
+        <a class="btn" href="/audit/">{CTA}</a>
       </article>
     </div>
   </div>
@@ -638,7 +638,7 @@ def market_page(key):
       <h2>Local knowledge, local support</h2>
       <p>Our office is in Claremont, Cape Town. We understand South African search behaviour, South African directories and the realities of running an SME here, and when you call or WhatsApp, you get a real person in your time zone.</p>
       <p>We help South African businesses, from car hire and safaris to flooring and retail, get found on Google Search, Google Maps and AI search. Looking for SEO in Cape Town? You&rsquo;re in the right place. We work with businesses nationwide, too.</p>
-      <div class="btn-row"><a class="btn" href="/contact/#audit">{CTA}</a></div>
+      <div class="btn-row"><a class="btn" href="/audit/">{CTA}</a></div>
     </div>
   </div>
 </section>"""
@@ -689,7 +689,7 @@ def market_page(key):
 <section class="section{'' if key=='za' else ' alt'}">
   <div class="container split">
     <div><span class="eyebrow">Web developers &amp; agencies</span><h2>Outsourcing SEO from {cfg['name']}?</h2><p>If you build websites or run an agency, you can hand your clients&rsquo; SEO to us. White-label and outsourced SEO fulfilment, delivered by specialists.</p><div class="btn-row"><a class="btn ghost" href="/partners/">See how partnering works</a></div></div>
-    <div><h3>Next step</h3><p>Not sure where you stand? Our free visibility audit shows how your business appears on Google, Google Maps and AI search today.</p><div class="btn-row"><a class="btn" href="/contact/#audit">{CTA}</a></div></div>
+    <div><h3>Next step</h3><p>Not sure where you stand? Our free visibility audit shows how your business appears on Google, Google Maps and AI search today.</p><div class="btn-row"><a class="btn" href="/audit/">{CTA}</a></div></div>
   </div>
 </section>
 {cta_band()}
@@ -721,7 +721,7 @@ def partners():
     body = hero("White-Label &amp; Outsourced SEO Services for Agencies and Web Developers",
                 "Give your clients specialist Local SEO and AI SEO, without building an SEO team. We work quietly behind your brand.",
                 crumbs=[("Partners", None)], eyebrow="Agency & developer partners", buttons=False,
-                extra=f'<div class="btn-row"><a class="btn" href="/contact/?topic=partner#audit">Talk to us about partnering</a></div>') + f"""
+                extra=f'<div class="btn-row"><a class="btn" href="/contact/?topic=partner#message">Talk to us about partnering</a></div>') + f"""
 <section class="section">
   <div class="container">
     <div class="section-head"><h2>SEO fulfilment you can rely on</h2><p class="lead">You own the client relationship. We do the specialist SEO work behind the scenes.</p></div>
@@ -742,7 +742,7 @@ def partners():
     <div class="card">
       <h3>The Get Found difference</h3>
       <p>Specialists in <strong>Local SEO</strong> and <strong>AI SEO</strong>, the two areas your clients are asking about most. Founder-led, hands-on and quick to respond.</p>
-      <a class="btn" href="/contact/?topic=partner#audit">Start the conversation</a>
+      <a class="btn" href="/contact/?topic=partner#message">Start the conversation</a>
     </div>
   </div>
 </section>
@@ -895,7 +895,7 @@ def blog_post(p):
     <div class="cta-box">
       <h2>Want us to do this for your business?</h2>
       <p>Get Found are Local SEO and AI SEO specialists. Find out how visible your business is today with a free visibility audit.</p>
-      <div class="btn-row"><a class="btn" href="/contact/#audit">{CTA}</a><a class="btn ghost" href="/services/">Services &amp; pricing</a></div>
+      <div class="btn-row"><a class="btn" href="/audit/">{CTA}</a><a class="btn ghost" href="/services/">Services &amp; pricing</a></div>
     </div>
   </div>
 </article>
@@ -944,21 +944,21 @@ def faq_page():
 
 
 def contact():
-    body = hero("Contact Get Found: Get Your Free Visibility Audit",
-                "Tell us about your business and we&rsquo;ll show you how visible you are on Google, Google Maps and AI search today. We usually respond to enquiries within a few hours.",
+    body = hero("Contact Get Found",
+                "Questions, quotes or partnership enquiries? Send us a message and we&rsquo;ll get back to you. We usually respond within a few hours.",
                 crumbs=[("Contact", None)], eyebrow="Contact", buttons=False) + f"""
 <section class="section">
   <div class="container split" style="align-items:start">
-    <div id="audit">
-      <h2>Request your free visibility audit</h2>
+    <div id="message">
+      <h2>Send us a message</h2>
       <form class="form" id="audit-form" novalidate>
         <div class="row"><div><label for="first_name">First name *</label><input id="first_name" name="first_name" required autocomplete="given-name"></div><div><label for="last_name">Last name</label><input id="last_name" name="last_name" autocomplete="family-name"></div></div>
         <div class="row"><div><label for="email">Email *</label><input id="email" name="email" type="email" required autocomplete="email"></div><div><label for="phone">Phone / WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div></div>
         <div class="row"><div><label for="business">Business name</label><input id="business" name="business" autocomplete="organization"></div><div><label for="website">Website</label><input id="website" name="website" type="text" inputmode="url" placeholder="www.example.com"></div></div>
-        <div><label for="interest">I&rsquo;m interested in</label><select id="interest" name="interest"><option>Free Visibility Audit</option><option>Local SEO</option><option>SEO + AI SEO</option><option>White-label / agency partnership</option><option>Something else</option></select></div>
+        <div><label for="interest">I&rsquo;m interested in</label><select id="interest" name="interest"><option>General enquiry</option><option>Local SEO</option><option>SEO + AI SEO</option><option>White-label / agency partnership</option><option>Something else</option></select></div>
         <div><label for="message">Tell us a little about your business</label><textarea id="message" name="message"></textarea></div>
         <div class="hp" aria-hidden="true"><label>Leave blank<input name="company_website_hp" tabindex="-1" autocomplete="off"></label></div>
-        <button class="btn" type="submit">{CTA}</button>
+        <button class="btn" type="submit">Send message</button>
         <p class="form-note" id="form-status" role="status" aria-live="polite">We&rsquo;ll only use your details to respond to your enquiry.</p>
       </form>
     </div>
@@ -970,12 +970,12 @@ def contact():
         <li><strong>Email</strong><a href="mailto:{EMAIL}">{EMAIL}</a></li>
         <li><strong>Address</strong>{ADDRESS['street']}, {ADDRESS['suburb']}<br>{ADDRESS['city']}, {ADDRESS['country']} {ADDRESS['postcode']}<br><a href="{MAPS}" target="_blank" rel="noopener">View on Google Maps</a></li>
       </ul>
-      <div class="card" style="margin-top:1.6rem"><h3>What happens next?</h3><ol style="padding-left:1.2em;margin:0"><li>We review your business online.</li><li>We reply with what we found and where the quick wins are.</li><li>If it makes sense, we talk about next steps. No pressure.</li></ol></div>
+      <div class="card" style="margin-top:1.6rem"><h3>Want to see how visible you are?</h3><p>Get your free visibility audit. It takes a minute and the report opens straight away.</p><a class="btn" href="/audit/">{CTA}</a></div>
     </aside>
   </div>
 </section>"""
-    write("/contact/", page("/contact/", "Contact Get Found | Free Local SEO & AI SEO Visibility Audit",
-                            "Contact Get Found in Cape Town for a free visibility audit. Call 074 124 2969, WhatsApp or email rian@get-found.co.za. Local SEO and AI SEO specialists.",
+    write("/contact/", page("/contact/", "Contact Get Found | Local SEO & AI SEO Specialists in Cape Town",
+                            "Contact Get Found in Cape Town. Call 074 124 2969, WhatsApp or email rian@get-found.co.za. Local SEO and AI SEO specialists.",
                             body, [LOCAL_BUSINESS, breadcrumbs([("Home", "/"), ("Contact", "/contact/")])]))
 
 
@@ -1015,7 +1015,7 @@ def audit_page():
 </section>"""
     write("/audit/", page("/audit/", "Free Visibility Audit",
                           "Get a free Google Business Profile health report for your business. Enter your details and see how visible you are on Google.",
-                          body, [breadcrumbs([("Home", "/"), ("Free Visibility Audit", "/audit/")])], noindex=True))
+                          body, [breadcrumbs([("Home", "/"), ("Free Visibility Audit", "/audit/")])]))
 
 
 def not_found():
@@ -1025,7 +1025,7 @@ def not_found():
 
 def seo_files():
     urls = [("/", "1.0"), ("/services/", "0.9"), ("/markets/", "0.7"), ("/markets/south-africa/", "0.9"), ("/markets/uk/", "0.8"), ("/markets/usa/", "0.8"),
-            ("/partners/", "0.7"), ("/resources/", "0.8"), ("/blog/", "0.8"), ("/faq/", "0.7"), ("/contact/", "0.8")]
+            ("/audit/", "0.9"), ("/partners/", "0.7"), ("/resources/", "0.8"), ("/blog/", "0.8"), ("/faq/", "0.7"), ("/contact/", "0.8")]
     urls += [(f"/blog/{p['slug']}/", "0.6") for p in POSTS_SORTED]
     mods = {f"/blog/{p['slug']}/": p["modified"] for p in POSTS}
     xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
