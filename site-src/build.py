@@ -332,6 +332,28 @@ def post_card(p):
 </article>"""
 
 
+
+def chatgpt_proof(heading_level="h2"):
+    """Real ChatGPT result for Vineyard Car Hire (23 Nov 2026) plus a Local Falcon quote."""
+    return f"""<section class="section dark glow" id="ai-proof">
+  <div class="container split" style="align-items:center">
+    <figure class="shot">
+      <div class="bar"><i></i><i></i><i></i><span>Real ChatGPT answer · 23 November 2026</span></div>
+      <img src="/assets/img/chatgpt-vineyard-car-hire.webp" width="630" height="470" alt="ChatGPT answer to the question: what are the best, most reliable and cost effective car hire companies to use in Cape Town, December 2026. Vineyard Car Hire is listed as number 1." loading="lazy">
+    </figure>
+    <div>
+      <span class="eyebrow">Real AI search result</span>
+      <{heading_level}>Customers now ask ChatGPT who to choose. Here&rsquo;s what it said.</{heading_level}>
+      <p class="lead">We asked ChatGPT for the best, most reliable and cost-effective car hire companies in Cape Town. Our client <strong style="color:#fff">Vineyard Car Hire</strong> came up as the <strong style="color:#fff">number one recommendation</strong>.</p>
+      <p>AI search is the newest way customers find a business, and the businesses it names are the ones that get the call. Building that visibility is what our AI SEO work is all about.</p>
+      <p class="fine">A real example from 23 November 2026. AI answers change, so this is an example, not a guaranteed outcome.</p>
+      <div class="btn-row"><a class="btn" href="/contact/#audit">{CTA}</a><a class="btn ghost" href="/services/#seo-ai-seo">See SEO + AI SEO</a></div>
+      <figure class="qcard"><img src="/assets/img/local-falcon-quote.webp" width="800" height="407" alt="Quote from Local Falcon: if you want to rank in ChatGPT for local searches, you'll need to focus on how your business appears across a broader digital ecosystem; not just Google." loading="lazy"></figure>
+    </div>
+  </div>
+</section>"""
+
+
 POSTS_SORTED = sorted(POSTS, key=lambda p: p["published"], reverse=True)
 
 # --------------------------------------------------------------------------- pages
@@ -366,8 +388,10 @@ def home():
 </div>"""
 
     reviews = "".join(
-        f'<figure class="review"><div class="stars" aria-label="5 stars">★★★★★</div><blockquote>“{esc(q)}”</blockquote><figcaption>{esc(n)}<span>{esc(r)}</span></figcaption></figure>'
-        for q, n, r in REVIEWS
+        '<figure class="review">'
+        + ('<span class="src"><span aria-hidden="true">★★★★★</span> Google review</span>' if src == "google" else '<span class="src plain">Client testimonial</span>')
+        + f'<blockquote>“{esc(q)}”</blockquote><figcaption>{esc(n)}<span>{esc(r)}</span></figcaption></figure>'
+        for q, n, r, src in REVIEWS
     )
     trusted = "".join(f"<li>{esc(t)}</li>" for t in TRUSTED)
     faqs = faq_block([FAQS[i] for i in HOME_FAQ_IDX])
@@ -435,6 +459,8 @@ def home():
     <ul class="trust">{trusted}</ul>
   </div>
 </section>
+
+{chatgpt_proof()}
 
 <section class="section alt" id="reviews">
   <div class="container">
@@ -515,6 +541,8 @@ def services():
     </div>
   </div>
 </section>
+
+{chatgpt_proof()}
 
 <section class="section alt" id="which">
   <div class="container narrow">
