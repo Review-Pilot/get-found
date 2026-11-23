@@ -77,6 +77,7 @@ TRUSTED = [
     ("MJ Flooring", "logo-mj-flooring.webp", 439, 108),
     ("The Wholesome Dog Co", "logo-the-wholesome-dog-co.webp", 327, 136),
     ("Lisa King Collection", "logo-lisa-king-collection.webp", 190, 190),
+    ("B Inspired Digital", "logo-b-inspired-digital.webp", 314, 178),
 ]
 
 # (group, question, answer)  — 30 FAQs, in the order of the site strategy document.
