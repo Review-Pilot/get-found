@@ -418,8 +418,11 @@ def home():
 <section class="cred" aria-label="Credentials">
   <div class="container">
     <div class="cred-card">
-      <img src="/assets/img/google-partner-badge.webp" width="300" height="286" alt="Google Partner badge">
-      <p><strong>Google Partner</strong><span>Local SEO &amp; AI SEO specialists in Cape Town, working with businesses in South Africa, the UK and the USA.</span></p>
+      <div class="cred-badges">
+        <img src="/assets/img/google-partner-badge.webp" width="300" height="286" alt="Google Partner badge">
+        <img src="/assets/img/stellar-top-100-marketing-seo-2024.webp" width="300" height="286" alt="Stellar Top 100 Marketing - SEO 2024 award badge">
+      </div>
+      <p><strong>Google Partner &amp; Stellar Top 100</strong><span>Marketing &ndash; SEO, 2024. Local SEO &amp; AI SEO specialists in Cape Town, working with businesses in South Africa, the UK and the USA.</span></p>
     </div>
   </div>
 </section>

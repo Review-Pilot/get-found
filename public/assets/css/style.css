@@ -288,10 +288,11 @@ textarea { min-height: 140px; resize: vertical; }
 /* Google Partner credential */
 .cred { position: relative; z-index: 3; margin-top: clamp(-96px, -9vw, -56px); padding-bottom: 8px; }
 .cred-card { display: flex; align-items: center; justify-content: center; gap: 28px; max-width: 780px; margin-inline: auto; background: #fff; border-radius: var(--radius-lg); padding: 20px 32px; box-shadow: 0 24px 60px rgba(10, 14, 60, .28); }
-.cred-card img { width: 112px; height: auto; flex: none; }
+.cred-badges { display: flex; gap: 12px; flex: none; }
+.cred-card img { width: 104px; height: auto; flex: none; border-radius: 6px; }
 .cred-card p { margin: 0; color: var(--muted); line-height: 1.5; }
 .cred-card strong { display: block; color: var(--ink); font-size: 1.15rem; margin-bottom: 2px; }
 .cred-card span { display: block; font-size: .95rem; }
-@media (max-width: 640px) { .cred-card { flex-direction: column; text-align: center; gap: 12px; padding: 22px 20px; } }
+@media (max-width: 640px) { .cred-badges { justify-content: center; } .cred-card img { width: 92px; } .cred-card { flex-direction: column; text-align: center; gap: 12px; padding: 22px 20px; } }
 .badges { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 22px; }
 .badges img { width: 96px; height: auto; border-radius: 6px; }
