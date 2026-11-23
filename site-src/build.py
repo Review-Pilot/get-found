@@ -159,7 +159,10 @@ def footer():
         <p>Local SEO &amp; AI SEO specialists. We help businesses get found on Google, Google Maps and AI search, so the right customers choose them.</p>
         <p><strong style="color:#fff">Get Found. Get Chosen. Grow.</strong></p>
         <div class="socials">{soc}</div>
-        <img class="gp-badge" src="/assets/img/google-partner-badge.webp" width="300" height="286" alt="Google Partner badge" loading="lazy">
+        <div class="badges">
+          <img src="/assets/img/google-partner-badge.webp" width="300" height="286" alt="Google Partner badge" loading="lazy">
+          <img src="/assets/img/stellar-top-100-marketing-seo-2024.webp" width="300" height="286" alt="Stellar Top 100 Marketing - SEO 2024 award badge" loading="lazy">
+        </div>
       </div>
       <div>
         <h2>Quick links</h2>

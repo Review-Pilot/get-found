@@ -293,4 +293,5 @@ textarea { min-height: 140px; resize: vertical; }
 .cred-card strong { display: block; color: var(--ink); font-size: 1.15rem; margin-bottom: 2px; }
 .cred-card span { display: block; font-size: .95rem; }
 @media (max-width: 640px) { .cred-card { flex-direction: column; text-align: center; gap: 12px; padding: 22px 20px; } }
-.gp-badge { width: 96px; height: auto; margin-top: 22px; border-radius: 6px; }
+.badges { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 22px; }
+.badges img { width: 96px; height: auto; border-radius: 6px; }
