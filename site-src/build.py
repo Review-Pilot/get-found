@@ -159,6 +159,7 @@ def footer():
         <p>Local SEO &amp; AI SEO specialists. We help businesses get found on Google, Google Maps and AI search, so the right customers choose them.</p>
         <p><strong style="color:#fff">Get Found. Get Chosen. Grow.</strong></p>
         <div class="socials">{soc}</div>
+        <img class="gp-badge" src="/assets/img/google-partner-badge.webp" width="300" height="286" alt="Google Partner badge" loading="lazy">
       </div>
       <div>
         <h2>Quick links</h2>
@@ -405,6 +406,15 @@ def home():
     <p class="lead">Your customers are searching right now, on Google, on the map and in tools like ChatGPT. We make sure it&rsquo;s your business they find, trust and choose.</p>
     <div class="btn-row center"><a class="btn" href="/contact/#audit">{CTA}</a><a class="btn ghost" href="/services/">See services &amp; pricing</a></div>
     <p class="tagline">Get Found. Get Chosen. <span>Grow.</span></p>
+  </div>
+</section>
+
+<section class="cred" aria-label="Credentials">
+  <div class="container">
+    <div class="cred-card">
+      <img src="/assets/img/google-partner-badge.webp" width="300" height="286" alt="Google Partner badge">
+      <p><strong>Google Partner</strong><span>Local SEO &amp; AI SEO specialists in Cape Town, working with businesses in South Africa, the UK and the USA.</span></p>
+    </div>
   </div>
 </section>
 
