@@ -65,9 +65,9 @@ PRICING = {
 
 REVIEWS = [
     ("GF and Samantha has given us excellent service and increased our traffic exponentially over the last 12 months.", "Warren Jeppe", "Owner, MJ Flooring"),
-    ("Excellent service, value for money SEO that has improved our traffic vastly. Keep it up Get-found.", "Murray Carlyle", "Owner, Carlyles on Derry"),
-    ("Get-found increased my Google traffic by over 50% in the first six months of working together. Thanks guys and keep it up!", "Sean Stockdale", "Owner, Instant Hedge"),
-    ("I am extremely happy and impressed with the service and results. It is rare to find a service provider who returns emails promptly and returns phone calls. Thank you and I recommend Get-found to any business needing a hands on operator.", "Lisa King", "Owner, The Lisa King Collection"),
+    ("Rian and Get-Found have been amazing and are constantly making a significant positive improvement to my business. Really appreciate the lengths they go to to achieve results. Professional and fun guys, highly recommended.", "Chris Ryder", "Owner, The Wholesome Dog Co"),
+    ("Such a profound experience working with Rian, he really knows his stuff when it comes to SEO and optimizing all your platforms to be more visible online. What inspires me is that he is also constantly working on staying on top of the latest trends and technology to really give you the best value for your money. I highly recommend working with him!", "Amanda Ferreira", "Owner, B Inspired Digital"),
+    ("I am super thrilled with Get-Found's SEO service. Rian is friendly and easy to work with, making the onboarding process effortless. Although I've been a customer for a short time, I've already noticed a significant improvement in my business, with a stronger online presence and increased interest. Thank you!", "Lisa King", "Owner, The Lisa King Collection"),
 ]
 
 TRUSTED = ["Vineyard Car Hire", "African Welcome Safaris", "MJ Flooring"]
