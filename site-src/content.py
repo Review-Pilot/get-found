@@ -64,13 +64,20 @@ PRICING = {
 }
 
 REVIEWS = [
-    ("GF and Samantha has given us excellent service and increased our traffic exponentially over the last 12 months.", "Warren Jeppe", "Owner, MJ Flooring", "testimonial"),
+    ("GF and Samantha has given us excellent service and increased our traffic exponentially over the last 12 months.", "Warren Jeppe", "Owner, MJ Flooring", "google"),
     ("Rian and Get-Found have been amazing and are constantly making a significant positive improvement to my business. Really appreciate the lengths they go to to achieve results. Professional and fun guys, highly recommended.", "Chris Ryder", "Owner, The Wholesome Dog Co", "google"),
     ("Such a profound experience working with Rian, he really knows his stuff when it comes to SEO and optimizing all your platforms to be more visible online. What inspires me is that he is also constantly working on staying on top of the latest trends and technology to really give you the best value for your money. I highly recommend working with him!", "Amanda Ferreira", "Owner, B Inspired Digital", "google"),
     ("I am super thrilled with Get-Found's SEO service. Rian is friendly and easy to work with, making the onboarding process effortless. Although I've been a customer for a short time, I've already noticed a significant improvement in my business, with a stronger online presence and increased interest. Thank you!", "Lisa King", "Owner, The Lisa King Collection", "google"),
 ]
 
-TRUSTED = ["Vineyard Car Hire", "African Welcome Safaris", "MJ Flooring"]
+# (name, logo file in /assets/img, width, height). A sixth logo can simply be added here.
+TRUSTED = [
+    ("Vineyard Car Hire", "logo-vineyard-car-hire.webp", 232, 102),
+    ("African Welcome Safaris", "logo-african-welcome-safaris.webp", 276, 129),
+    ("MJ Flooring", "logo-mj-flooring.webp", 439, 108),
+    ("The Wholesome Dog Co", "logo-the-wholesome-dog-co.webp", 327, 136),
+    ("Lisa King Collection", "logo-lisa-king-collection.webp", 190, 190),
+]
 
 # (group, question, answer)  — 30 FAQs, in the order of the site strategy document.
 FAQS = [

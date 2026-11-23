@@ -394,7 +394,10 @@ def home():
         + f'<blockquote>“{esc(q)}”</blockquote><figcaption>{esc(n)}<span>{esc(r)}</span></figcaption></figure>'
         for q, n, r, src in REVIEWS
     )
-    trusted = "".join(f"<li>{esc(t)}</li>" for t in TRUSTED)
+    trusted = "".join(
+        f'<li><img src="/assets/img/{f}" width="{w}" height="{h}" alt="{esc(n)} logo" loading="lazy"></li>'
+        for n, f, w, h in TRUSTED
+    )
     faqs = faq_block([FAQS[i] for i in HOME_FAQ_IDX])
     latest = "".join(post_card(p) for p in POSTS_SORTED[:3])
 
