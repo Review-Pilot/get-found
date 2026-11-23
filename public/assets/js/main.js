@@ -77,6 +77,17 @@
     if (start !== "za") setMarket(start, false);
   }
 
+  // ---- Audit page: if the lead widget has not appeared after 8s, show a simple fallback
+  var aw = document.getElementById("gmbbriefcase-widget");
+  if (aw) {
+    setTimeout(function () {
+      if (!aw.children.length && !aw.textContent.trim()) {
+        var fb = document.getElementById("audit-fallback");
+        if (fb) fb.hidden = false;
+      }
+    }, 8000);
+  }
+
   // ---- FAQ search
   var fs = document.getElementById("faq-search");
   if (fs) {

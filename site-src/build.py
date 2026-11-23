@@ -979,6 +979,45 @@ def contact():
                             body, [LOCAL_BUSINESS, breadcrumbs([("Home", "/"), ("Contact", "/contact/")])]))
 
 
+def audit_page():
+    """Free Visibility Audit page hosting the GMB Briefcase lead widget (wgt_15)."""
+    body = hero("Get Your Free Visibility Audit",
+                "Find out how your business shows up on Google today. Enter your details below and we&rsquo;ll send you a free Google Business Profile health report.",
+                crumbs=[("Free Visibility Audit", None)], eyebrow="Free audit", buttons=False) + f"""
+<section class="section">
+  <div class="container split" style="align-items:start">
+    <div class="audit-card" id="audit">
+      <h2 style="font-size:1.5rem">Start your free audit</h2>
+      <!-- Lead widget: GMB Briefcase (widget wgt_15). Embed code exactly as supplied. -->
+      <div id="gmbbriefcase-widget"
+           data-widget-id="wgt_15"
+           data-behavior="report_new_tab"
+           data-template="default"
+           data-report-type="gmb_health"></div>
+      <script src="https://member.gmbbriefcase.com/widget/widget.js?v=ad95f109" defer></script>
+      <noscript><p class="form-note">Please turn on JavaScript to use the audit form, or WhatsApp us on <a href="{WHATSAPP}">{PHONE_DISPLAY}</a>.</p></noscript>
+      <div class="audit-fallback" id="audit-fallback" hidden>
+        <p><strong>The audit form didn&rsquo;t load.</strong> No problem, message us and we&rsquo;ll run your audit for you.</p>
+        <div class="btn-row"><a class="btn" href="{WHATSAPP}" target="_blank" rel="noopener">WhatsApp us</a><a class="btn ghost" href="mailto:{EMAIL}?subject=Free%20Visibility%20Audit">Email us</a></div>
+      </div>
+    </div>
+    <aside>
+      <h2 style="font-size:1.5rem">What happens next</h2>
+      <ol class="steps-list">
+        <li>Search for your business on Google and add your email and phone number.</li>
+        <li>Your Google Business Profile health report opens in a new tab. If your browser asks, allow pop-ups for this site.</li>
+        <li>We follow up to show you where the quick wins are. No pressure.</li>
+      </ol>
+      <p class="form-note">We&rsquo;ll only use your details to send your report and respond to your enquiry.</p>
+      <div class="card" style="margin-top:1.4rem"><h3>Prefer to talk first?</h3><p>Call <a href="tel:{PHONE_TEL}">{PHONE_DISPLAY}</a>, <a href="{WHATSAPP}" target="_blank" rel="noopener">WhatsApp us</a> or <a href="/contact/">send a message</a>.</p></div>
+    </aside>
+  </div>
+</section>"""
+    write("/audit/", page("/audit/", "Free Visibility Audit",
+                          "Get a free Google Business Profile health report for your business. Enter your details and see how visible you are on Google.",
+                          body, [breadcrumbs([("Home", "/"), ("Free Visibility Audit", "/audit/")])], noindex=True))
+
+
 def not_found():
     body = f"""<section class="hero"><div class="container"><span class="eyebrow">Error 404</span><h1>We couldn&rsquo;t find that page</h1><p class="lead">The page you&rsquo;re looking for may have moved. Here are some good places to start.</p><div class="btn-row center"><a class="btn" href="/">Go to the homepage</a><a class="btn ghost" href="/services/">Services &amp; pricing</a><a class="btn ghost" href="/blog/">Read the blog</a></div></div></section>"""
     (PUB / "404.html").write_text(page("/404.html", "Page not found", "Page not found.", body, noindex=True), encoding="utf-8")
@@ -1024,7 +1063,7 @@ def main():
     partners(); resources(); blog_index()
     for p in POSTS:
         blog_post(p)
-    faq_page(); contact(); not_found(); seo_files()
+    faq_page(); contact(); audit_page(); not_found(); seo_files()
     print("Built", len(list(PUB.rglob("*.html"))), "pages")
 
 

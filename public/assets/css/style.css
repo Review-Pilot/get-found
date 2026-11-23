@@ -296,3 +296,10 @@ textarea { min-height: 140px; resize: vertical; }
 @media (max-width: 640px) { .cred-badges { justify-content: center; } .cred-card img { width: 92px; } .cred-card { flex-direction: column; text-align: center; gap: 12px; padding: 22px 20px; } }
 .badges { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 22px; }
 .badges img { width: 96px; height: auto; border-radius: 6px; }
+
+/* Free Visibility Audit (lead widget) */
+.audit-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 28px; box-shadow: var(--shadow); min-height: 380px; }
+.audit-card .audit-fallback { margin-top: 1.2rem; padding: 18px 20px; background: var(--light); border-radius: var(--radius); }
+.audit-card .audit-fallback[hidden] { display: none; }
+.steps-list { padding-left: 1.2em; }
+.steps-list li { margin-bottom: .8rem; }
