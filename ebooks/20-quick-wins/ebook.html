@@ -1,0 +1,480 @@
+<!doctype html><html lang="en-ZA"><head><meta charset="utf-8"><title>20 Quick Wins | Get Found</title><style>@font-face { font-family: "Poppins"; font-weight: 400; src: url("assets/poppins-400.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-weight: 500; src: url("assets/poppins-500.woff2") format("woff2"); }
+@font-face { font-family: "Poppins"; font-weight: 600; src: url("assets/poppins-600.woff2") format("woff2"); }
+@page { size: A4; margin: 0; }
+:root { --blue: #233dff; --blue-soft: #8e9cff; --ink: #0d0e14; --muted: #565a6b; --light: #f4f6fc; --tint: #eef0ff; --line: #d5d9ee; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: "Poppins", Arial, sans-serif; color: var(--ink); font-size: 10pt; line-height: 1.5; }
+b { font-weight: 600; }
+h1, h2, h3, h4, p, ul, ol { margin: 0; }
+
+.page { width: 210mm; height: 297mm; position: relative; overflow: hidden; page-break-after: always; break-after: page; background: #fff; display: flex; flex-direction: column; }
+.runhead { padding: 8mm 14mm 0; display: flex; justify-content: space-between; font-size: 7.5pt; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.runhead span:last-child { color: var(--blue); }
+.content { flex: 1; padding: 5mm 14mm 4mm; display: flex; flex-direction: column; gap: 4mm; min-height: 0; }
+.runfoot { padding: 0 14mm 7mm; display: flex; justify-content: space-between; font-size: 7.5pt; color: var(--muted); }
+.runfoot span:last-child { font-weight: 600; color: var(--ink); }
+
+/* shared */
+.eyebrow { font-size: 8.5pt; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; color: var(--blue); }
+.pill { display: inline-block; background: var(--blue); color: #fff; padding: 2mm 5mm; border-radius: 99px; font-size: 9pt; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.glow { position: absolute; left: 50%; bottom: -120mm; width: 290mm; height: 290mm; transform: translateX(-50%); background: radial-gradient(circle, rgba(35,61,255,.95) 0%, rgba(35,61,255,.5) 24%, rgba(35,61,255,0) 62%); z-index: 0; }
+.ring { width: 52mm; height: 52mm; border-radius: 50%; padding: 1.6mm; background: linear-gradient(135deg, #233dff, #8e9cff); flex: none; }
+.ring img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
+.ring.small { width: 44mm; height: 44mm; }
+.cover-tag { position: absolute; left: 16mm; bottom: 12mm; font-size: 10pt; font-weight: 600; letter-spacing: .06em; color: #9fb0ff; z-index: 2; }
+
+/* cover */
+.cover, .cta { background: #000; color: #fff; }
+.logo { position: absolute; left: 16mm; top: 14mm; width: 38mm; z-index: 2; }
+.cover-main { position: absolute; left: 16mm; right: 16mm; top: 62mm; z-index: 2; }
+.cover h1 { font-weight: 600; font-size: 62pt; line-height: 1.02; margin: 7mm 0 5mm; letter-spacing: -.01em; }
+.cover .big20 { font-size: 150pt; line-height: .9; color: var(--blue); letter-spacing: -.04em; text-shadow: 0 0 40px rgba(35,61,255,.55); }
+.sub { font-size: 15pt; line-height: 1.4; color: #d6d9ee; max-width: 150mm; }
+.sub b { color: #fff; }
+.cover-parts { display: flex; gap: 3mm; margin-top: 9mm; flex-wrap: wrap; }
+.cover-parts span { border: 1px solid rgba(255,255,255,.4); padding: 2mm 4.5mm; border-radius: 99px; font-size: 9pt; font-weight: 500; }
+.cover-author { position: absolute; left: 16mm; bottom: 34mm; display: flex; align-items: center; gap: 7mm; z-index: 2; font-size: 11pt; line-height: 1.45; color: #d6d9ee; }
+.cover-author b { color: #fff; font-size: 13pt; }
+
+/* intro */
+.intro-grid { display: grid; grid-template-columns: 76mm 1fr; gap: 10mm; align-items: center; margin-top: 3mm; }
+.frame { position: relative; margin: 0 0 4mm 4mm; }
+.frame::before { content: ""; position: absolute; left: -4mm; bottom: -4mm; width: 80%; height: 80%; background: var(--blue); border-radius: 3mm; }
+.frame img { position: relative; width: 100%; display: block; border-radius: 3mm; }
+.intro-grid h2 { font-size: 28pt; line-height: 1.1; margin: 2mm 0 4mm; font-weight: 600; }
+.intro-grid p { font-size: 10.3pt; line-height: 1.6; margin-bottom: 3mm; }
+.sec { font-size: 13pt; font-weight: 600; margin-top: 3mm; }
+.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; }
+.mini { background: var(--light); border-radius: 4mm; padding: 4mm 4.5mm; }
+.mini b:first-child { display: block; font-size: 24pt; line-height: 1; color: var(--blue); margin-bottom: 1.5mm; }
+.mini h4 { font-size: 10.5pt; font-weight: 600; margin-bottom: 1mm; }
+.mini p { font-size: 8.8pt; color: var(--muted); line-height: 1.45; }
+.ticks { list-style: none; padding: 0; display: grid; gap: 2mm; }
+.ticks li { position: relative; padding-left: 8mm; font-size: 10pt; }
+.ticks li::before { content: ""; position: absolute; left: 0; top: .5mm; width: 5mm; height: 5mm; border-radius: 50%; background: var(--tint); }
+.ticks li::after { content: ""; position: absolute; left: 1.6mm; top: 1.9mm; width: 2mm; height: 1.1mm; border-left: 1.5px solid var(--blue); border-bottom: 1.5px solid var(--blue); transform: rotate(-45deg); }
+.reality { background: var(--tint); border-left: 1.6mm solid var(--blue); padding: 4mm 5mm; border-radius: 0 3mm 3mm 0; font-size: 10pt; line-height: 1.55; }
+.chip.inline { display: inline-block; vertical-align: middle; }
+
+/* part band */
+.band { position: relative; overflow: hidden; background: #000; color: #fff; border-radius: 5mm; padding: 6mm 8mm; height: 34mm; display: flex; align-items: center; flex: none; }
+.band::before { content: ""; position: absolute; left: 40%; bottom: -60mm; width: 120mm; height: 120mm; background: radial-gradient(circle, rgba(35,61,255,.9), rgba(35,61,255,0) 62%); }
+.band-text { position: relative; z-index: 2; }
+.kicker { font-size: 8pt; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; color: var(--blue-soft); }
+.band h2 { font-size: 22pt; line-height: 1.1; font-weight: 600; margin: 1mm 0; }
+.band p { font-size: 10pt; color: #d6d9ee; max-width: 105mm; }
+.band-map { position: absolute; right: 0; top: 0; height: 100%; width: 72mm; object-fit: cover; -webkit-mask-image: linear-gradient(to right, transparent, #000 45%); mask-image: linear-gradient(to right, transparent, #000 45%); opacity: .95; }
+
+/* win cards */
+.win { flex: 1; display: grid; grid-template-columns: 15mm 1fr; gap: 5.5mm; background: var(--light); border-radius: 5mm; padding: 6mm 7mm; min-height: 0; }
+.num { width: 14mm; height: 14mm; border-radius: 50%; background: var(--blue); color: #fff; font-size: 18pt; font-weight: 600; display: flex; align-items: center; justify-content: center; box-shadow: 0 2mm 5mm rgba(35,61,255,.3); }
+.body { display: flex; flex-direction: column; justify-content: center; min-width: 0; }
+.top { display: flex; justify-content: space-between; align-items: flex-start; gap: 4mm; }
+.top h3 { font-size: 14pt; line-height: 1.25; font-weight: 600; }
+.chips { display: flex; gap: 1.5mm; flex: none; }
+.chip { font-size: 7.2pt; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; padding: 1mm 2.4mm; border-radius: 99px; background: #e3e6f0; color: var(--muted); white-space: nowrap; }
+.chip.hot { background: var(--blue); color: #fff; }
+.chip.time { background: #fff; border: 1px solid var(--line); }
+.steps { list-style: none; padding: 0; margin: 3mm 0 3.5mm; }
+.steps li { display: flex; gap: 3mm; font-size: 10pt; line-height: 1.45; margin-bottom: 1.8mm; }
+.sn { flex: none; width: 5.2mm; height: 5.2mm; border-radius: 50%; background: #fff; border: 1px solid var(--blue); color: var(--blue); font-size: 7.4pt; font-weight: 600; display: flex; align-items: center; justify-content: center; margin-top: .3mm; }
+.foot { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; }
+.foot p { font-size: 9pt; line-height: 1.42; padding: 2.8mm 3.4mm; border-radius: 2.5mm; }
+.why { background: #fff; border-left: 1mm solid var(--blue); }
+.tip { background: #fff7dd; border-left: 1mm solid #f5a623; }
+.tip.warn { background: #ffedee; border-left-color: #e5484d; }
+
+/* AI explainer */
+.explain { background: #000; color: #fff; border-radius: 5mm; padding: 5mm 7mm 4mm; position: relative; overflow: hidden; flex: none; }
+.explain::before { content: ""; position: absolute; right: -30mm; bottom: -70mm; width: 130mm; height: 130mm; background: radial-gradient(circle, rgba(35,61,255,.8), rgba(35,61,255,0) 62%); }
+.explain > * { position: relative; }
+.explain h3 { font-size: 12pt; margin-bottom: 3mm; font-weight: 600; }
+.ex-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3.5mm; }
+.ex-grid b { font-size: 9.2pt; color: #fff; display: block; }
+.ex-grid p { font-size: 8.2pt; color: #c9cde0; line-height: 1.4; }
+.explain .fine { font-size: 7.8pt; color: #aab0cf; margin-top: 3mm; }
+
+/* checklist */
+.content h2 { font-size: 26pt; font-weight: 600; line-height: 1.1; }
+.lead { font-size: 11pt; color: var(--muted); }
+.check-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; margin: 3mm 0; }
+.check-grid h4 { font-size: 10.5pt; font-weight: 600; color: var(--blue); margin-bottom: 2.5mm; }
+.check { list-style: none; padding: 0; display: grid; gap: 3.4mm; }
+.check li { display: flex; gap: 3mm; font-size: 10pt; line-height: 1.38; }
+.box { flex: none; width: 5mm; height: 5mm; border: 1.2px solid var(--blue); border-radius: 1mm; margin-top: .3mm; }
+.fine { font-size: 8pt; color: var(--muted); }
+
+/* CTA */
+.cta-main { position: absolute; left: 16mm; right: 16mm; top: 56mm; z-index: 2; }
+.cta h2 { font-size: 46pt; line-height: 1.05; font-weight: 600; margin: 6mm 0 5mm; }
+.cta .sub { font-size: 12.5pt; max-width: 150mm; }
+.cta-box { background: var(--blue); border-radius: 5mm; padding: 7mm 8mm; margin-top: 8mm; max-width: 150mm; display: flex; flex-direction: column; gap: 1.5mm; box-shadow: 0 6mm 14mm rgba(0,0,0,.35); }
+.cta-box b { font-size: 17pt; }
+.cta-box span { font-size: 10.5pt; color: #e6e9ff; }
+.cta-box a { align-self: flex-start; margin-top: 3mm; background: #fff; color: var(--blue); padding: 2.4mm 6mm; border-radius: 99px; font-size: 13pt; font-weight: 600; text-decoration: none; }
+.contact { display: flex; flex-direction: column; gap: 1.4mm; margin-top: 8mm; font-size: 11pt; color: #d6d9ee; }
+.contact b { color: #fff; }
+.cta-photos { position: absolute; left: 16mm; right: 16mm; bottom: 26mm; display: flex; align-items: flex-end; gap: 8mm; z-index: 2; }
+.cta-photos .map { width: 112mm; height: 44mm; object-fit: cover; border-radius: 4mm; border: 1px solid rgba(255,255,255,.25); }
+
+.notes { background: var(--light); border-radius: 5mm; padding: 5mm 7mm 6mm; flex: 1; display: flex; flex-direction: column; min-height: 40mm; }
+.notes h4 { font-size: 10.5pt; font-weight: 600; color: var(--blue); margin-bottom: 2mm; }
+.notes .lines { flex: 1; background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 8.2mm, #c9cde0 8.2mm, #c9cde0 8.4mm); }
+</style></head><body>
+<section class="page cover">
+  <div class="glow"></div>
+  <img class="logo" src="assets/logo.png" alt="Get Found">
+  <div class="cover-main">
+    <span class="pill">Free guide</span>
+    <h1><span class="big20">20</span><br>Quick Wins</h1>
+    <p class="sub">to get your local business found on <b>Google</b>, <b>Google Maps</b> and <b>AI&nbsp;search</b></p>
+    <div class="cover-parts"><span>Google Business Profile</span><span>Your website</span><span>AI search</span></div>
+  </div>
+  <div class="cover-author">
+    <div class="ring"><img src="assets/rian-square.jpg" alt="Rian, founder of Get Found"></div>
+    <p><b>A quick-start guide by Rian</b><br>Founder, Get Found &middot; Cape Town</p>
+  </div>
+  <div class="cover-tag">Get Found. Get Chosen. Grow.</div>
+</section>
+<section class="page ">
+  <div class="runhead"><span>Welcome</span><span>20 Quick Wins</span></div>
+  <div class="content">
+  <div class="intro-grid">
+    <div class="frame"><img src="assets/rian-wide.jpg" alt="Rian"></div>
+    <div>
+      <span class="eyebrow">Welcome</span>
+      <h2>Hi, I&rsquo;m Rian.</h2>
+      <p>I&rsquo;ve spent over 30 years in business, and today I help local businesses get found online.</p>
+      <p>Most businesses don&rsquo;t need anything fancy to start winning. They need the basics done properly. So I&rsquo;ve put the 20 quickest, easiest wins into one short guide.</p>
+      <p><b>No jargon. No tech degree needed.</b> Pick one, do it today, tick it off.</p>
+    </div>
+  </div>
+  <h3 class="sec">How to use this guide</h3>
+  <div class="trio">
+    <div class="mini"><b>1</b><h4>One win a day</h4><p>Do one a day for 20 days, or knock out a few on a quiet afternoon.</p></div>
+    <div class="mini"><b>2</b><h4>10 to 20 minutes each</h4><p>Most wins are quick. The time is shown on every card.</p></div>
+    <div class="mini"><b>3</b><h4>Start with the big ones</h4><p>Wins marked <span class="chip hot inline">Big impact</span> move the needle most.</p></div>
+  </div>
+  <h3 class="sec">Before you start, grab these</h3>
+  <ul class="ticks">
+    <li>Your <b>Google account</b> login (the one you use for your business)</li>
+    <li>Your <b>website login</b>, or the person who looks after your site</li>
+    <li>Your <b>smartphone</b>, for photos and for testing your site</li>
+  </ul>
+  <div class="reality"><b>A reality check:</b> no one can promise you the number-one spot, not us and not anyone else. Every business and every area is different. But these 20 steps cover what matters most, and the sooner you start, the sooner you can start seeing results.</div>
+</div>
+  <div class="runfoot"><span>Get Found &middot; Local SEO &amp; AI SEO &middot; Cape Town</span><span>2</span></div>
+</section>
+<section class="page ">
+  <div class="runhead"><span>Part 1 · Google Business Profile</span><span>20 Quick Wins</span></div>
+  <div class="content">
+<div class="band">
+  <div class="band-text"><span class="kicker">Part 1 &middot; Wins 1&ndash;9</span><h2>Google Business Profile</h2><p>Your free shop window on Google Search and Google Maps.</p></div>
+  <img class="band-map" src="assets/local-seo-map.jpg" alt="">
+</div>
+<article class="win">
+  <div class="num">1</div>
+  <div class="body">
+    <div class="top"><h3>Claim and verify your profile</h3><div class="chips"><span class='chip'>Easy win</span><span class="chip time">15 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>Search your business name on Google, or go to business.google.com.</span></li><li><span class='sn'>2</span><span>Click <b>Claim this business</b> (or <b>Add your business</b>) and follow the prompts.</span></li><li><span class='sn'>3</span><span>Verify using the method Google offers: video, phone, email or postcard.</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> Until it's verified, you can't control how you show up on Google Search and Maps.</p>
+      <p class="tip"><b>Tip:</b> Claimed it years ago? Log in and check the owner email is one you still use.</p>
+    </div>
+  </div>
+</article>
+<article class="win">
+  <div class="num">2</div>
+  <div class="body">
+    <div class="top"><h3>Pick the right main category</h3><div class="chips"><span class='chip hot'>Big impact</span><span class="chip time">5 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>In your profile, choose <b>Edit profile</b>, then <b>Business information</b>.</span></li><li><span class='sn'>2</span><span>Set your main category to the most specific match, like &ldquo;Car rental agency&rdquo;, not &ldquo;Business&rdquo;.</span></li><li><span class='sn'>3</span><span>Add a few extra categories that truly describe what you do.</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> Your main category is one of the biggest signals telling Google which searches you should show up for.</p>
+      <p class="tip"><b>Tip:</b> Only pick categories you really offer. Fewer, accurate ones beat a long list.</p>
+    </div>
+  </div>
+</article>
+<article class="win">
+  <div class="num">3</div>
+  <div class="body">
+    <div class="top"><h3>Make your details perfect</h3><div class="chips"><span class='chip'>Easy win</span><span class="chip time">10 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>Use your real business name, exactly as on your signage. No extra keywords.</span></li><li><span class='sn'>2</span><span>Check your address, phone number and website link.</span></li><li><span class='sn'>3</span><span>Set your opening hours, plus special hours for public holidays and December.</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> Wrong hours or numbers cost you customers and trust, and Google compares your details with other websites.</p>
+      <p class="tip"><b>Tip:</b> Copy your name, address and phone number once, and paste them exactly the same everywhere else.</p>
+    </div>
+  </div>
+</article></div>
+  <div class="runfoot"><span>Get Found &middot; Local SEO &amp; AI SEO &middot; Cape Town</span><span>3</span></div>
+</section>
+<section class="page ">
+  <div class="runhead"><span>Part 1 · Google Business Profile</span><span>20 Quick Wins</span></div>
+  <div class="content">
+<article class="win">
+  <div class="num">4</div>
+  <div class="body">
+    <div class="top"><h3>Write your business description</h3><div class="chips"><span class='chip'>Easy win</span><span class="chip time">10 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>You have up to 750 characters. Put the most important things in the first 250.</span></li><li><span class='sn'>2</span><span>Say what you do, where you do it and who you help, in plain English.</span></li><li><span class='sn'>3</span><span>Work in a few natural keywords like &ldquo;plumber in Claremont&rdquo;. Don't stuff them or add links.</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> It's your elevator pitch, and it helps Google and AI tools understand what you do.</p>
+      <p class="tip"><b>Tip:</b> Read it out loud. If it sounds like a robot wrote it, rewrite it.</p>
+    </div>
+  </div>
+</article>
+<article class="win">
+  <div class="num">5</div>
+  <div class="body">
+    <div class="top"><h3>Add your services, products and extras</h3><div class="chips"><span class='chip hot'>Big impact</span><span class="chip time">15 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>Add each service you offer, with a one-line description and a price if you can.</span></li><li><span class='sn'>2</span><span>Add your products if you sell any.</span></li><li><span class='sn'>3</span><span>Tick every attribute that applies, like &ldquo;online appointments&rdquo; or &ldquo;wheelchair accessible&rdquo;.</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> Google's AI now answers customer questions using your profile details, so the more complete it is, the better those answers.</p>
+      <p class="tip"><b>Tip:</b> If a detail is true, add it. Every blank field is a missed chance.</p>
+    </div>
+  </div>
+</article>
+<article class="win">
+  <div class="num">6</div>
+  <div class="body">
+    <div class="top"><h3>Add 10 or more real photos</h3><div class="chips"><span class='chip'>Easy win</span><span class="chip time">20 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>Take photos on your phone in daylight: outside, inside, your team and your work.</span></li><li><span class='sn'>2</span><span>Upload them under <b>Photos</b>, and add your logo and a cover photo.</span></li><li><span class='sn'>3</span><span>Add new photos every week or two.</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> People choose businesses that look real and active, and photos get a lot of attention.</p>
+      <p class="tip"><b>Tip:</b> Skip stock photos. Real beats pretty.</p>
+    </div>
+  </div>
+</article></div>
+  <div class="runfoot"><span>Get Found &middot; Local SEO &amp; AI SEO &middot; Cape Town</span><span>4</span></div>
+</section>
+<section class="page ">
+  <div class="runhead"><span>Part 1 · Google Business Profile</span><span>20 Quick Wins</span></div>
+  <div class="content">
+<article class="win">
+  <div class="num">7</div>
+  <div class="body">
+    <div class="top"><h3>Ask 5 happy customers for a review</h3><div class="chips"><span class='chip hot'>Big impact</span><span class="chip time">15 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>In your profile, click <b>Ask for reviews</b> and copy your review link.</span></li><li><span class='sn'>2</span><span>WhatsApp it to 5 customers who were happy, with a friendly, personal message.</span></li><li><span class='sn'>3</span><span>Put a QR code for your review link on your counter or invoices (free tools can make one).</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> Reviews are one of the strongest signals for Google Maps, and AI tools tend to recommend businesses with plenty of good reviews.</p>
+      <p class="tip warn"><b>Careful:</b> Never pay for reviews or offer rewards for them. It breaks Google's rules.</p>
+    </div>
+  </div>
+</article>
+<article class="win">
+  <div class="num">8</div>
+  <div class="body">
+    <div class="top"><h3>Reply to every review</h3><div class="chips"><span class='chip'>Easy win</span><span class="chip time">10 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>Open your reviews and reply to each one, newest first.</span></li><li><span class='sn'>2</span><span>Thank happy customers by name and mention something specific.</span></li><li><span class='sn'>3</span><span>For a bad review, stay calm, apologise, and offer to fix it offline.</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> Replies show you care, and customers read them before they choose you.</p>
+      <p class="tip"><b>Tip:</b> Try to reply within 48 hours.</p>
+    </div>
+  </div>
+</article>
+<article class="win">
+  <div class="num">9</div>
+  <div class="body">
+    <div class="top"><h3>Post a weekly update</h3><div class="chips"><span class='chip'>Easy win</span><span class="chip time">10 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>In your profile, choose <b>Add update</b> (or <b>Posts</b>).</span></li><li><span class='sn'>2</span><span>Share an offer, news, a new product or a recent job, with one photo.</span></li><li><span class='sn'>3</span><span>Add a button such as <b>Call now</b> or <b>Learn more</b>.</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> Fresh posts keep your profile active and give people a reason to click.</p>
+      <p class="tip"><b>Tip:</b> Write four posts in one sitting and you're covered for a month.</p>
+    </div>
+  </div>
+</article></div>
+  <div class="runfoot"><span>Get Found &middot; Local SEO &amp; AI SEO &middot; Cape Town</span><span>5</span></div>
+</section>
+<section class="page ">
+  <div class="runhead"><span>Part 2 · Your website</span><span>20 Quick Wins</span></div>
+  <div class="content">
+<div class="band">
+  <div class="band-text"><span class="kicker">Part 2 &middot; Wins 10&ndash;15</span><h2>Your website</h2><p>Simple fixes that help Google, AI tools and customers understand you.</p></div>
+  
+</div>
+<article class="win">
+  <div class="num">10</div>
+  <div class="body">
+    <div class="top"><h3>Put your service and town in your page titles</h3><div class="chips"><span class='chip hot'>Big impact</span><span class="chip time">15 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>In your website's SEO settings, find the <b>page title</b> for each page.</span></li><li><span class='sn'>2</span><span>Use this pattern: <i>Service in Town | Business name</i>, for example &ldquo;Plumber in Claremont, Cape Town | Smith Plumbing&rdquo;.</span></li><li><span class='sn'>3</span><span>Keep it under about 60 characters, and make every page's title different.</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> The page title is one of the first things Google reads, and it's what people see in search results.</p>
+      <p class="tip"><b>Tip:</b> Use the same words in the big heading (H1) at the top of the page.</p>
+    </div>
+  </div>
+</article>
+<article class="win">
+  <div class="num">11</div>
+  <div class="body">
+    <div class="top"><h3>Match your name, address and phone number</h3><div class="chips"><span class='chip'>Easy win</span><span class="chip time">10 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>Put your business name, address and phone number as <b>text</b> in your website footer.</span></li><li><span class='sn'>2</span><span>Copy them exactly from your Google profile.</span></li><li><span class='sn'>3</span><span>Add a Google Map to your contact page.</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> When your details match everywhere, Google and AI tools can trust you're a real, stable business.</p>
+      <p class="tip"><b>Tip:</b> Use text, not an image. Google can't read words inside pictures.</p>
+    </div>
+  </div>
+</article>
+<article class="win">
+  <div class="num">12</div>
+  <div class="body">
+    <div class="top"><h3>Make it easy to call or WhatsApp</h3><div class="chips"><span class='chip'>Easy win</span><span class="chip time">15 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>Add a <b>Call now</b> button that opens the phone dialler (a link that starts with tel:).</span></li><li><span class='sn'>2</span><span>Add a <b>WhatsApp</b> button (a link like wa.me/27741234567, your number with country code, no spaces or plus).</span></li><li><span class='sn'>3</span><span>Check on your own phone that both are easy to tap near the top of the page.</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> Most local searches happen on phones. Make contacting you a one-tap job.</p>
+      <p class="tip"><b>Tip:</b> Many South African customers would rather WhatsApp than call.</p>
+    </div>
+  </div>
+</article></div>
+  <div class="runfoot"><span>Get Found &middot; Local SEO &amp; AI SEO &middot; Cape Town</span><span>6</span></div>
+</section>
+<section class="page ">
+  <div class="runhead"><span>Part 2 · Your website</span><span>20 Quick Wins</span></div>
+  <div class="content">
+<article class="win">
+  <div class="num">13</div>
+  <div class="body">
+    <div class="top"><h3>Make your site fast on a phone</h3><div class="chips"><span class='chip'>Easy win</span><span class="chip time">20 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>Go to pagespeed.web.dev and test your home page.</span></li><li><span class='sn'>2</span><span>Shrink big photos with a free tool like Squoosh or TinyPNG before you upload them.</span></li><li><span class='sn'>3</span><span>Remove what you don't need, like old plug-ins and auto-playing videos.</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> Slow pages lose visitors, and speed is part of how Google judges your site.</p>
+      <p class="tip"><b>Tip:</b> Aim for photos under about 200 KB each.</p>
+    </div>
+  </div>
+</article>
+<article class="win">
+  <div class="num">14</div>
+  <div class="body">
+    <div class="top"><h3>Give each service its own page</h3><div class="chips"><span class='chip hot'>Big impact</span><span class="chip time">45 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>Make a separate page for each main service (and each main area you serve).</span></li><li><span class='sn'>2</span><span>On each one, explain in your own words what you do, who it's for, your prices or process, and add real photos.</span></li><li><span class='sn'>3</span><span>Add a button to call, WhatsApp or book.</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> One page per service gives Google, and your customers, a clear answer for each search.</p>
+      <p class="tip"><b>Tip:</b> Start with the service that earns you the most money.</p>
+    </div>
+  </div>
+</article>
+<article class="win">
+  <div class="num">15</div>
+  <div class="body">
+    <div class="top"><h3>Connect Google Search Console</h3><div class="chips"><span class='chip'>Easy win</span><span class="chip time">15 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>Go to search.google.com/search-console and sign in with your Google account.</span></li><li><span class='sn'>2</span><span>Add your website and verify it. The page walks you through it.</span></li><li><span class='sn'>3</span><span>Submit your sitemap, usually yourwebsite.com/sitemap.xml.</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> It's free, it shows how people find you, and it tells you if Google has trouble with your site.</p>
+      <p class="tip"><b>Tip:</b> Check back once a month to see which searches bring people to you.</p>
+    </div>
+  </div>
+</article></div>
+  <div class="runfoot"><span>Get Found &middot; Local SEO &amp; AI SEO &middot; Cape Town</span><span>7</span></div>
+</section>
+<section class="page ">
+  <div class="runhead"><span>Part 3 · AI search</span><span>20 Quick Wins</span></div>
+  <div class="content">
+<div class="band">
+  <div class="band-text"><span class="kicker">Part 3 &middot; Wins 16&ndash;20</span><h2>AI search</h2><p>Be the business ChatGPT, Gemini and Perplexity talk about.</p></div>
+  
+</div>
+<article class="win">
+  <div class="num">16</div>
+  <div class="body">
+    <div class="top"><h3>Test yourself in AI search</h3><div class="chips"><span class='chip'>Easy win</span><span class="chip time">10 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>Open ChatGPT, Gemini or Perplexity.</span></li><li><span class='sn'>2</span><span>Ask: &ldquo;Who is the best [your service] in [your town]?&rdquo; and &ldquo;Tell me about [your business name].&rdquo;</span></li><li><span class='sn'>3</span><span>Screenshot what each says: who gets recommended, and what they say about you (right or wrong).</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> Now you know where you stand today and what to fix first.</p>
+      <p class="tip"><b>Tip:</b> Answers change between tools and from day to day. Test a few times and look for patterns.</p>
+    </div>
+  </div>
+</article>
+<article class="win">
+  <div class="num">17</div>
+  <div class="body">
+    <div class="top"><h3>Answer your customers' questions on your website</h3><div class="chips"><span class='chip hot'>Big impact</span><span class="chip time">30 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>Write down the 5 to 8 questions customers ask you most.</span></li><li><span class='sn'>2</span><span>Add a <b>Frequently Asked Questions</b> section to your site, or to the right service page.</span></li><li><span class='sn'>3</span><span>Answer each in 2 or 3 plain sentences, with the direct answer first.</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> AI tools love clear, direct answers, and so do your customers.</p>
+      <p class="tip"><b>Tip:</b> Use your customers' own words, not industry jargon.</p>
+    </div>
+  </div>
+</article>
+<article class="win">
+  <div class="num">18</div>
+  <div class="body">
+    <div class="top"><h3>List your business in more places</h3><div class="chips"><span class='chip'>Easy win</span><span class="chip time">30 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>Claim your free profiles on <b>Bing Places</b> and <b>Apple Business Connect</b>.</span></li><li><span class='sn'>2</span><span>Set up a Facebook business page and a LinkedIn page if you don't have them.</span></li><li><span class='sn'>3</span><span>Add your business to 2 or 3 directories that suit your industry and area, using exactly the same name, address and phone number each time.</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> AI tools and search engines gather information from many places, and matching details build trust.</p>
+      <p class="tip"><b>Tip:</b> Keep a note of where you're listed so you can update everything at once.</p>
+    </div>
+  </div>
+</article></div>
+  <div class="runfoot"><span>Get Found &middot; Local SEO &amp; AI SEO &middot; Cape Town</span><span>8</span></div>
+</section>
+<section class="page ">
+  <div class="runhead"><span>Part 3 · AI search</span><span>20 Quick Wins</span></div>
+  <div class="content">
+<article class="win">
+  <div class="num">19</div>
+  <div class="body">
+    <div class="top"><h3>Get mentioned by other local sites</h3><div class="chips"><span class='chip hot'>Big impact</span><span class="chip time">30 min</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>List 5 local businesses, suppliers, associations or community sites you already know.</span></li><li><span class='sn'>2</span><span>Ask each one to mention or link to your business, for example on a &ldquo;partners&rdquo; page or in a newsletter.</span></li><li><span class='sn'>3</span><span>Say yes to local events, podcasts and write-ups, and link to them from your site.</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> Mentions from trusted local sources are strong proof that you're a real, respected business in your area.</p>
+      <p class="tip"><b>Tip:</b> Offer something back: a quote, a useful tip or a link to them.</p>
+    </div>
+  </div>
+</article>
+<article class="win">
+  <div class="num">20</div>
+  <div class="body">
+    <div class="top"><h3>Make it a 15-minute monthly habit</h3><div class="chips"><span class='chip'>Easy win</span><span class="chip time">15 min / month</span></div></div>
+    <ol class="steps"><li><span class='sn'>1</span><span>Once a month, reply to new reviews and ask 2 or 3 customers for a fresh one.</span></li><li><span class='sn'>2</span><span>Add a post and a few new photos, and check your hours and details.</span></li><li><span class='sn'>3</span><span>Re-run your AI test from Win 16 and see what's changed.</span></li></ol>
+    <div class="foot">
+      <p class="why"><b>Why it works:</b> Steady, regular activity beats one big burst. Local SEO is a habit, not a one-off job.</p>
+      <p class="tip"><b>Tip:</b> Put a repeating reminder in your phone calendar right now.</p>
+    </div>
+  </div>
+</article>
+  <div class="explain">
+    <h3>How AI tools pick who to recommend (in plain English)</h3>
+    <div class="ex-grid">
+      <div><b>Strong Google Maps presence</b><p>Businesses that show up well on Maps tend to be recommended more often.</p></div>
+      <div><b>Plenty of good reviews</b><p>Lots of recent, positive reviews are a powerful signal.</p></div>
+      <div><b>Matching details everywhere</b><p>The same name, address and phone number across the web builds trust.</p></div>
+      <div><b>Mentions by trusted sites</b><p>Local sites, directories and news pieces that name you add proof.</p></div>
+      <div><b>Clear answers on your site</b><p>Plain, direct answers to real customer questions are easy for AI to use.</p></div>
+    </div>
+    <p class="fine">AI answers change from day to day and between tools, so no one can control them. But doing these things well puts you in the best position.</p>
+  </div></div>
+  <div class="runfoot"><span>Get Found &middot; Local SEO &amp; AI SEO &middot; Cape Town</span><span>9</span></div>
+</section>
+<section class="page ">
+  <div class="runhead"><span>Checklist</span><span>20 Quick Wins</span></div>
+  <div class="content">
+  <span class="eyebrow">Your cheat sheet</span>
+  <h2>The 20-win checklist</h2>
+  <p class="lead">Print this page, stick it on the wall, and tick them off as you go.</p>
+  <div class="check-grid"><div><h4>Part 1 · Google Business Profile</h4><ul class='check'><li><span class='box'></span><span><b>1.</b> Claim and verify your profile</span></li><li><span class='box'></span><span><b>2.</b> Pick the right main category</span></li><li><span class='box'></span><span><b>3.</b> Make your details perfect</span></li><li><span class='box'></span><span><b>4.</b> Write your business description</span></li><li><span class='box'></span><span><b>5.</b> Add your services, products and extras</span></li><li><span class='box'></span><span><b>6.</b> Add 10 or more real photos</span></li><li><span class='box'></span><span><b>7.</b> Ask 5 happy customers for a review</span></li><li><span class='box'></span><span><b>8.</b> Reply to every review</span></li><li><span class='box'></span><span><b>9.</b> Post a weekly update</span></li></ul></div><div><h4>Part 2 · Your website</h4><ul class='check'><li><span class='box'></span><span><b>10.</b> Put your service and town in your page titles</span></li><li><span class='box'></span><span><b>11.</b> Match your name, address and phone number</span></li><li><span class='box'></span><span><b>12.</b> Make it easy to call or WhatsApp</span></li><li><span class='box'></span><span><b>13.</b> Make your site fast on a phone</span></li><li><span class='box'></span><span><b>14.</b> Give each service its own page</span></li><li><span class='box'></span><span><b>15.</b> Connect Google Search Console</span></li></ul></div><div><h4>Part 3 · AI search</h4><ul class='check'><li><span class='box'></span><span><b>16.</b> Test yourself in AI search</span></li><li><span class='box'></span><span><b>17.</b> Answer your customers' questions on your website</span></li><li><span class='box'></span><span><b>18.</b> List your business in more places</span></li><li><span class='box'></span><span><b>19.</b> Get mentioned by other local sites</span></li><li><span class='box'></span><span><b>20.</b> Make it a 15-minute monthly habit</span></li></ul></div></div>
+  <div class="notes"><h4>My notes: what to fix first</h4><div class="lines"></div></div>
+  <div class="reality"><b>Made it to 20?</b> Nice work. You&rsquo;ve done more for your local visibility than most of your competitors. Repeat Win 20 every month to keep the momentum going.</div>
+  <p class="fine">These are general tips. Google and AI tools change often, so check Google&rsquo;s own help pages if something looks different on your screen.</p>
+</div>
+  <div class="runfoot"><span>Get Found &middot; Local SEO &amp; AI SEO &middot; Cape Town</span><span>10</span></div>
+</section>
+<section class="page cta">
+  <div class="glow"></div>
+  <img class="logo" src="assets/logo.png" alt="Get Found">
+  <div class="cta-main">
+    <span class="pill">Want a hand?</span>
+    <h2>Rather have us<br>do it for you?</h2>
+    <p class="sub">We&rsquo;re customer-driven and customer-focused. Once you&rsquo;ve paid and we have your information, we get started straight away and turn the job around in under 7 days.</p>
+    <div class="cta-box">
+      <b>Get your free visibility audit</b>
+      <span>See how visible your business is on Google, Google Maps and AI search today.</span>
+      <a>www.get-found.co.za</a>
+    </div>
+    <div class="contact"><span>WhatsApp / call <b>074 124 2969</b></span><span>rian@get-found.co.za</span><span>11 Grove Avenue, Claremont, Cape Town</span></div>
+  </div>
+  <div class="cta-photos">
+    <div class="ring small"><img src="assets/rian-square.jpg" alt="Rian"></div>
+    <img class="map" src="assets/local-seo-map.jpg" alt="Local SEO">
+  </div>
+  <div class="cover-tag">Get Found. Get Chosen. Grow.</div>
+</section></body></html>
