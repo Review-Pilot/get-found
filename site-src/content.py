@@ -37,6 +37,7 @@ LOCAL_SEO_FEATURES = [
     "AI search rankings included in your report",
     "Geo-location rank tracking",
     "Website rank tracking",
+    "Citation building and local business listings",
     "Ongoing competitor analysis",
     "Website chatbot setup",
     "Monthly report: rankings and completed tasks, emailed to you automatically",
