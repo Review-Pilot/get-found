@@ -303,3 +303,6 @@ textarea { min-height: 140px; resize: vertical; }
 .audit-card .audit-fallback[hidden] { display: none; }
 .steps-list { padding-left: 1.2em; }
 .steps-list li { margin-bottom: .8rem; }
+
+.card-img { width: calc(100% + 64px); max-width: none; margin: -32px -32px 20px; border-radius: var(--radius-lg) var(--radius-lg) 0 0; height: 150px; object-fit: cover; object-position: center; }
+@media (max-width: 900px) { .card-img { height: 130px; } }

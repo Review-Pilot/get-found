@@ -541,6 +541,8 @@ def services():
     </div>
     <div class="grid two" id="packages">
       <article class="card" id="local-seo">
+        <img class="card-img" src="/assets/img/local-seo-map.webp" width="694" height="324" alt="Local SEO: map pins showing a business found in local search" loading="lazy">
+        <span class="tag" style="align-self:flex-start;margin-bottom:.6rem">Local &amp; regional exposure</span>
         <h2 style="font-size:1.7rem">Local SEO</h2>
         <p>Get found on Google Search and Google Maps by customers in your area, and give them reasons to choose you.</p>
         <div class="price"><span class="amt" data-za="R6,000" data-uk="£350" data-us="$450">R6,000</span><small> / month</small></div>
@@ -550,8 +552,9 @@ def services():
       </article>
       <article class="card featured" id="seo-ai-seo">
         <span class="badge">EVERYTHING IN LOCAL SEO, AND MORE</span>
+        <span class="tag" style="align-self:flex-start;margin-bottom:.6rem">National exposure</span>
         <h2 style="font-size:1.7rem">SEO + AI SEO</h2>
-        <p>Add a full SEO strategy and AI search optimisation, so you&rsquo;re visible in Google results, on the map and in tools like ChatGPT.</p>
+        <p>Add a full SEO strategy and AI search optimisation, so you&rsquo;re visible in Google results, on the map and in tools like ChatGPT, Claude and Perplexity.</p>
         <div class="price"><span class="amt" data-za="R12,000" data-uk="£650" data-us="$750">R12,000</span><small> / month</small></div>
         <div class="setup" data-za="South Africa · once-off setup R5,000" data-uk="United Kingdom · once-off setup £300" data-us="United States · once-off setup $400">South Africa · once-off setup R5,000</div>
         {ticks(AI_SEO_FEATURES)}
@@ -590,7 +593,7 @@ def services():
       <p>Web developers, freelancers and agencies can hand their SEO to us. White-label and outsourced SEO fulfilment, delivered by specialists, so you can offer clients a complete service without building an SEO team.</p>
       <div class="btn-row"><a class="btn" href="/partners/">Partner with us</a></div>
     </div>
-    <div class="card"><h3>What partners get</h3>{ticks(["Local SEO and SEO + AI SEO fulfilment", "Reporting you can share with your clients", "A specialist team that works behind your brand", "Cost-effective rates, with the work done from South Africa"])}</div>
+    <div class="card"><h3>What partners get</h3>{ticks(["Recurring 20% to 30% commission for affiliates and partners", "Local SEO and SEO + AI SEO fulfilment", "Reporting you can share with your clients", "A specialist team that works behind your brand", "Cost-effective rates, with the work done from South Africa"])}</div>
   </div>
 </section>
 
